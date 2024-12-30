@@ -62,7 +62,7 @@ pub fn target_arch() -> String {
 /// e.g. mac-x64-release (Same name on GH releases)
 pub fn webrtc_triple() -> String {
     let profile = if use_debug() { "debug" } else { "release" };
-    format!("{}-{}-{}", target_os(), target_arch(), profile)
+    format!("{}-{}-{}", "linux", target_arch(), profile)
 }
 
 /// Using debug builds of webrtc is still experimental for now
