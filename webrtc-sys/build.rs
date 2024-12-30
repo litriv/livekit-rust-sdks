@@ -135,14 +135,7 @@ fn main() {
 
             builder.flag("-std=c++2a");
         }
-        "freebsd" => {
-            println!("cargo:rustc-link-lib=dylib=rt");
-            println!("cargo:rustc-link-lib=dylib=dl");
-            println!("cargo:rustc-link-lib=dylib=pthread");
-            println!("cargo:rustc-link-lib=dylib=m");
-
-            builder.flag("-std=c++2a");
-        }
+        "freebsd" => {}
         "macos" => {
             println!("cargo:rustc-link-lib=framework=Foundation");
             println!("cargo:rustc-link-lib=framework=AVFoundation");
